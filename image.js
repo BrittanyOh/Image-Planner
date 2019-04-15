@@ -30,6 +30,7 @@ function AddPhoto(){
     img.className = "planning-img";
     img.id = "img_" + document.getElementsByTagName("img").length;
     $('planning-area').appendChild(img);
+    $('image-url').value = '';
   }
   //else print error message, toggle display
   else{
@@ -56,9 +57,23 @@ function DeletePhoto(){
   if(validateURL(remove_url)){
     remove_img = GrabImage(remove_url);
     $('planning-area').removeChild(remove_img);
+    $('image-url').value = '';
   }
   //else print error message, toggle display
   else{
     $('url-error').classList.toggle("alert");
   }
 }
+
+
+//TAKES URL IF CLICKED IMAGE AND PLACES IN SEARCH BAR
+var getImageURL = function() {
+  document.onclick = function(e) {
+    if (e.target.tagName == 'IMG') {
+      var image = e.target.getAttribute("src");
+      $('image-url').value = image;
+    }
+  }
+}
+
+getImageURL()
