@@ -1,0 +1,2 @@
+/* This assignment tests your understanding of JavaScript and its interaction with HTML user interfaces and
+DOM.*/
