@@ -1,6 +1,11 @@
 /* This assignment tests your understanding of JavaScript and its interaction with HTML user interfaces and
 DOM.*/
 
+
+//Attempt to create unobtrusive code
+document.getElementById("add-btn").addEventListener("click", AddPhoto);
+document.getElementById("delete-btn").addEventListener("click", DeletePhoto);
+
 //CHECK IF VALID URL
 function validateURL(url){
   var regex = new RegExp('^(https?:\\/\\/)?'+ // protocol
