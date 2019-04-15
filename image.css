@@ -16,6 +16,7 @@ nav{
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
 }
 
+
 .container{
   width: 90vw;
   margin: 20px 5vw 20px 5vw;
@@ -47,6 +48,50 @@ nav{
   max-height: 500px;
 }
 
+#planning-controls{
+  margin-top: 20px;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  display: flex;
+}
+
 button{
-  color:red;
+  background: black;
+  color: white;
+  width: 10vw;
+  height: 50px;
+  margin: 0 2px 0 2px;
+}
+
+button:hover{
+  background: grey;
+  cursor: pointer;
+}
+
+
+#image-url{
+  width: 30vw;
+  height: 39px;
+  padding: 5px;
+  margin: 0 2px 0 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+img{
+  margin: 10px;
+  border: .5px solid grey;
+  padding: 9px;
+}
+
+#url-error{
+  font-size: 10px;
+  font-style: italic;
+  font-family: Arial;
 }
