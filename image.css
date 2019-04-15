@@ -12,8 +12,14 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .planning-img{
   max-width: 100px;
   max-height: 100px;
+}
 
+/*checks for specfic img element id before doing hover zoom in effect*/
+[id^="img_"]:hover{
+  max-width: 500px;
+  max-height: 500px;
 }

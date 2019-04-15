@@ -28,6 +28,7 @@ function AddPhoto(){
     //if valid set the image src and class then append to planning area
     img.src = user_url;
     img.className = "planning-img";
+    img.id = "img_" + document.getElementsByTagName("img").length;
     $('planning-area').appendChild(img);
   }
   //else print error message, toggle display
