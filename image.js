@@ -31,14 +31,25 @@ function AddPhoto(){
   }
 }
 
+//FIND ALL IMG TAGS AND STORE DOM OBJECT
+function GrabImage(delete_url){
+  var imgs = document.getElementsByTagName("img");
+  for( var i=0; i<imgs.length; i++){
+    if(imgs[i].src == delete_url){
+      return imgs[i];
+    } //stores each image src in array
+  }
+  return NULL;
+}
+
 //GRABS USER ENTERED URL AND REMOVES FROM PLANNING AREA
 function DeletePhoto(){
   var remove_url = ($('image-url').value);
-  var src = $('img').getAttribute("src");
   var remove_img;
   //check if url is valid
   if(validateURL(remove_url)){
-    alert(src);
+    remove_img = GrabImage(remove_url);
+    $('planning-area').removeChild(remove_img);
   }
   //else print error message, toggle display
   else{
