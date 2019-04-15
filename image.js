@@ -15,10 +15,15 @@ function validateURL(url){
 //Grab users entered url and display the photo
 function AddPhoto(){
   var user_url = ($('image-url').value);
+  var img = document.createElement("img");
 
   //check if url is valud
-  if(validateURL(user_url));
-  //else print error message
+  if(validateURL(user_url)){
+    img.src = user_url;
+    img.className = "planning-img";
+    $('planning-area').appendChild(img);
+  }
+  //else print error message, toggle display
   else{
     $('url-error').classList.toggle("alert");
   }

@@ -6,3 +6,13 @@
   display: block !important;
   color: red;
 }
+
+.planning-area{
+  display: flex;
+  flex-wrap: wrap;
+}
+.planning-img{
+  max-width: 100px;
+  max-height: 100px;
+
+}
