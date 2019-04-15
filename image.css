@@ -1,0 +1,8 @@
+#url-error{
+  display: none;
+}
+
+.alert{
+  display: block !important;
+  color: red;
+}

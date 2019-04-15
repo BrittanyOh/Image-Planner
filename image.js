@@ -15,5 +15,11 @@ function validateURL(url){
 //Grab users entered url and display the photo
 function AddPhoto(){
   var user_url = ($('image-url').value);
-  alert(validateURL(user_url));
+
+  //check if url is valud
+  if(validateURL(user_url));
+  //else print error message
+  else{
+    $('url-error').classList.toggle("alert");
+  }
 }
