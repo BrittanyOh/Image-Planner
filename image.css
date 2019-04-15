@@ -8,6 +8,7 @@
 }
 
 .planning-area{
+  /* allows images to be posted fully to one row before starting next row */
   display: flex;
   flex-wrap: wrap;
 }
